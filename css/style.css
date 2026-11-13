@@ -2178,3 +2178,241 @@ a {
 .hello__card {
   margin-top: -4.5rem;
 }
+
+
+/* ==========================================================================
+   17. Dark mode — toggle button + night palette ("Aero at night")
+   ========================================================================== */
+.site-header__inner {
+  gap: 0.6rem;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.theme-toggle {
+  order: 3;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  color: var(--ocean);
+  background: rgb(255 255 255 / 0.8);
+  border: 1px solid rgb(5 81 142 / 0.22);
+  border-radius: 50%;
+  box-shadow: var(--shadow-soft), inset 0 1px 0 rgb(255 255 255 / 0.9);
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(18deg) scale(1.06);
+}
+
+/* Moon drawn in CSS; becomes a sun in dark mode */
+.theme-toggle__icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: inset -5px -3px 0 0 currentColor;
+  transition: box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+[data-theme="dark"] .theme-toggle__icon {
+  width: 12px;
+  height: 12px;
+  background: currentColor;
+  box-shadow: 0 -9px 0 -4px currentColor, 0 9px 0 -4px currentColor, 9px 0 0 -4px currentColor, -9px 0 0 -4px currentColor,
+    6.5px 6.5px 0 -4px currentColor, -6.5px 6.5px 0 -4px currentColor, 6.5px -6.5px 0 -4px currentColor, -6.5px -6.5px 0 -4px currentColor;
+}
+
+@media (max-width: 920px) {
+  .theme-toggle {
+    order: 0;
+  }
+}
+
+html {
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --white: #06182a;
+  --sky-soft: rgb(181 217 226 / 0.1);
+  --green-deep: #a8d880;
+  --ocean: #9fd6f2;
+  --ink: #e8f3f6;
+  --muted: #a7bfcc;
+  --hairline: 1px solid rgb(255 255 255 / 0.14);
+  --glass-bg: rgb(255 255 255 / 0.07);
+  --glass-border: 1px solid rgb(255 255 255 / 0.18);
+  --shadow: 0 14px 36px rgb(0 0 0 / 0.4);
+  --shadow-soft: 0 4px 14px rgb(0 0 0 / 0.3);
+}
+
+/* Surfaces that were hard-coded light */
+[data-theme="dark"] .site-header {
+  border-bottom-color: rgb(255 255 255 / 0.1);
+}
+
+[data-theme="dark"] .site-header::before {
+  background: rgb(6 24 42 / 0.74);
+}
+
+[data-theme="dark"] .hero {
+  background:
+    radial-gradient(circle at 88% 12%, rgb(109 158 70 / 0.38), transparent 42%),
+    radial-gradient(circle at 5% 85%, rgb(5 81 142 / 0.65), transparent 48%),
+    linear-gradient(180deg, #0a3050 0%, #082238 60%, var(--white) 100%);
+}
+
+[data-theme="dark"] .resume,
+[data-theme="dark"] .skills,
+[data-theme="dark"] .achievements {
+  background:
+    radial-gradient(circle at 100% 0%, rgb(109 158 70 / 0.3), transparent 45%),
+    radial-gradient(circle at 0% 100%, rgb(5 81 142 / 0.6), transparent 50%),
+    linear-gradient(160deg, #0a2b47 0%, #07202f 100%);
+}
+
+[data-theme="dark"] .marquee {
+  background: linear-gradient(90deg, #05518e 0%, #1c7c93 55%, #6d9e46 100%);
+}
+
+[data-theme="dark"] .contact {
+  background:
+    radial-gradient(ellipse at 15% 0%, rgb(143 190 110 / 0.35), transparent 50%),
+    radial-gradient(ellipse at 95% 100%, rgb(181 217 226 / 0.22), transparent 55%),
+    linear-gradient(160deg, #04406f 0%, #021f3a 100%);
+}
+
+[data-theme="dark"] .hello__card,
+[data-theme="dark"] .resume__box {
+  background:
+    radial-gradient(ellipse at 10% 0%, rgb(143 190 110 / 0.4), transparent 55%),
+    linear-gradient(160deg, #05518e 0%, #033a68 100%);
+}
+
+[data-theme="dark"] .hello__panel {
+  background: linear-gradient(160deg, #05518e 0%, #1c7c93 60%, #6d9e46 100%);
+}
+
+[data-theme="dark"] .project,
+[data-theme="dark"] .other li,
+[data-theme="dark"] .edu__item {
+  background: linear-gradient(180deg, rgb(255 255 255 / 0.09) 0%, rgb(255 255 255 / 0.04) 100%);
+}
+
+[data-theme="dark"] .project__media--phones,
+[data-theme="dark"] .project__media--shot {
+  background:
+    radial-gradient(circle at 85% 10%, rgb(109 158 70 / 0.45), transparent 50%),
+    linear-gradient(160deg, #0c3a5e 0%, #0a2b3d 100%);
+}
+
+[data-theme="dark"] .project__media--phones img,
+[data-theme="dark"] .project__media--shot img {
+  border-color: rgb(255 255 255 / 0.35);
+}
+
+[data-theme="dark"] .project__badge {
+  color: #05518e;
+}
+
+[data-theme="dark"] .chips li {
+  background: rgb(181 217 226 / 0.14);
+}
+
+[data-theme="dark"] .btn:not(.btn--primary) {
+  border-color: rgb(255 255 255 / 0.28);
+  box-shadow: var(--shadow-soft), inset 0 1px 0 rgb(255 255 255 / 0.2);
+}
+
+[data-theme="dark"] .btn:not(.btn--primary):hover {
+  background: rgb(255 255 255 / 0.16);
+}
+
+[data-theme="dark"] .nav__list a:hover {
+  background: rgb(255 255 255 / 0.1);
+}
+
+[data-theme="dark"] .nav__list a.is-active {
+  background: rgb(255 255 255 / 0.14);
+  border-color: rgb(255 255 255 / 0.22);
+}
+
+[data-theme="dark"] .nav-toggle,
+[data-theme="dark"] .theme-toggle {
+  background: rgb(255 255 255 / 0.1);
+  border-color: rgb(255 255 255 / 0.25);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.2);
+}
+
+[data-theme="dark"] .hero2__photo,
+[data-theme="dark"] .hero__frame {
+  background: rgb(255 255 255 / 0.12);
+  box-shadow: 0 24px 60px rgb(0 0 0 / 0.45), inset 0 1px 0 rgb(255 255 255 / 0.3);
+}
+
+[data-theme="dark"] .hero2__echo {
+  -webkit-text-stroke-color: rgb(159 214 242 / 0.4);
+}
+
+[data-theme="dark"] .hero2__echo span:nth-child(2) {
+  -webkit-text-stroke-color: rgb(168 216 128 / 0.5);
+}
+
+[data-theme="dark"] .hero2__links a {
+  border-bottom-color: rgb(159 214 242 / 0.4);
+}
+
+[data-theme="dark"] .tl::before {
+  background: rgb(255 255 255 / 0.2);
+}
+
+[data-theme="dark"] .field input,
+[data-theme="dark"] .field textarea {
+  color: #12324a;
+}
+
+[data-theme="dark"] .bubbles span {
+  opacity: 0.5;
+  border-color: rgb(255 255 255 / 0.3);
+}
+
+[data-theme="dark"] .hero::before {
+  opacity: 0.45;
+}
+
+[data-theme="dark"] .glass-hover::after {
+  background:
+    radial-gradient(180px circle at var(--mx, 50%) var(--my, 0%), rgb(255 255 255 / 0.2), rgb(255 255 255 / 0.05) 45%, transparent 70%),
+    linear-gradient(135deg, rgb(255 255 255 / 0.1) 0%, transparent 35%, transparent 65%, rgb(181 217 226 / 0.12) 100%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.4), inset 0 0 0 1px rgb(255 255 255 / 0.2);
+}
+
+[data-theme="dark"] .glass-hover:hover {
+  box-shadow: 0 22px 48px rgb(0 0 0 / 0.5);
+}
+
+@media (max-width: 920px) {
+  [data-theme="dark"] .site-nav {
+    background:
+      radial-gradient(circle at 90% 10%, rgb(109 158 70 / 0.35), transparent 45%),
+      linear-gradient(180deg, #0a3050 0%, #06182a 70%);
+  }
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Scroll-down orb removed: restore the hero's normal bottom spacing */
+.hero {
+  padding-bottom: clamp(3.5rem, 8vw, 6.5rem);
+}

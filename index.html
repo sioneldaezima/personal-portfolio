@@ -15,7 +15,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
-  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    document.documentElement.classList.add('js');
+    // Apply the saved (or system) theme before the page paints
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    })();
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -24,6 +33,10 @@
   <header class="site-header">
     <div class="wrap site-header__inner">
       <a class="logo" href="#home" aria-label="Back to top">SR</a>
+
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+        <span class="theme-toggle__icon" aria-hidden="true"></span>
+      </button>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span class="nav-toggle__bars" aria-hidden="true"></span>
@@ -81,8 +94,6 @@
         </div>
       </div>
     </section>
-
-    <div class="scroll-cue"><a href="#about">Scroll<br>down</a></div>
 
     <!-- Scrolling strip. Keep both lists identical so the loop is seamless. -->
     <div class="marquee" aria-hidden="true">

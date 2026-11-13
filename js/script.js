@@ -1,7 +1,7 @@
 /* Personal Portfolio — interactions
    1. Mobile menu   2. Active nav link   3. Reveal on scroll
    4. Project filter   5. Contact form   6. Liquid-glass hover
-   7. Floating bubbles   8. Footer year */
+   7. Floating bubbles   8. Dark mode toggle   9. Footer year */
 
 (function () {
   'use strict';
@@ -182,7 +182,29 @@
     section.insertBefore(layer, section.firstChild);
   });
 
-  /* ---------- 8. Footer year ---------- */
+  /* ---------- 8. Dark mode toggle ----------
+     The starting theme is set in index.html before the page paints.
+     This button switches it and remembers the choice. */
+  var themeButton = document.querySelector('.theme-toggle');
+  var root = document.documentElement;
+
+  function syncThemeButton() {
+    var dark = root.getAttribute('data-theme') === 'dark';
+    themeButton.setAttribute('aria-pressed', String(dark));
+    themeButton.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+
+  if (themeButton) {
+    syncThemeButton();
+    themeButton.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      syncThemeButton();
+    });
+  }
+
+  /* ---------- 9. Footer year ---------- */
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();
