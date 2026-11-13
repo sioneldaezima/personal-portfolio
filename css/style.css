@@ -2052,3 +2052,90 @@ a {
     margin-bottom: 0.2em;
   }
 }
+
+
+/* ==========================================================================
+   16. Floating bubbles (created in script.js)
+   ========================================================================== */
+.resume,
+.contact {
+  position: relative;
+  overflow: hidden;
+}
+
+.resume > .wrap,
+.contact > .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.bubbles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bubbles span {
+  position: absolute;
+  bottom: -120px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 28%, rgb(255 255 255 / 0.9) 0%, rgb(255 255 255 / 0.18) 30%, rgb(181 217 226 / 0.1) 62%, rgb(255 255 255 / 0.32) 100%);
+  border: 1px solid rgb(255 255 255 / 0.65);
+  box-shadow: inset 0 -6px 14px rgb(143 190 110 / 0.16);
+  opacity: 0;
+  animation-name: bubble-rise, bubble-sway;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-direction: normal, alternate;
+  will-change: transform, translate;
+}
+
+.contact .bubbles span {
+  background: radial-gradient(circle at 30% 28%, rgb(255 255 255 / 0.5) 0%, rgb(255 255 255 / 0.08) 32%, rgb(181 217 226 / 0.06) 62%, rgb(255 255 255 / 0.18) 100%);
+  border-color: rgb(255 255 255 / 0.3);
+  box-shadow: none;
+}
+
+@keyframes bubble-rise {
+  0% {
+    transform: translateY(0) scale(0.85);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(calc(-100cqh - 260px)) scale(1.08);
+    opacity: 0;
+  }
+}
+
+@keyframes bubble-sway {
+  from {
+    translate: -14px 0;
+  }
+  to {
+    translate: 14px 0;
+  }
+}
+
+.bubbles {
+  container-type: size;
+}
+
+/* The moving bubbles replace the small static one */
+.hero::after {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bubbles {
+    display: none;
+  }
+}

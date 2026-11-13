@@ -1,6 +1,7 @@
 /* Personal Portfolio — interactions
    1. Mobile menu   2. Active nav link   3. Reveal on scroll
-   4. Project filter   5. Contact form   6. Liquid-glass hover   7. Footer year */
+   4. Project filter   5. Contact form   6. Liquid-glass hover
+   7. Floating bubbles   8. Footer year */
 
 (function () {
   'use strict';
@@ -151,7 +152,37 @@
     });
   });
 
-  /* ---------- 7. Footer year ---------- */
+  /* ---------- 7. Floating bubbles ----------
+     Adds a few slow-rising glass bubbles behind the content of the
+     hero, resume and contact sections. Sizes, positions and speeds are
+     fixed (not random) so the page looks the same on every visit. */
+  var bubbleSets = {
+    '.hero':    [[8, 46, 26, 0], [22, 20, 34, -9], [37, 64, 30, -17], [55, 28, 38, -4], [68, 84, 28, -21], [81, 36, 33, -12], [93, 56, 36, -26]],
+    '.resume':  [[6, 30, 36, -5], [30, 54, 42, -20], [52, 22, 34, -12], [74, 70, 40, -28], [90, 34, 38, -8]],
+    '.contact': [[10, 40, 34, -6], [34, 24, 40, -18], [58, 72, 36, -25], [80, 30, 32, -11], [94, 52, 42, -30]]
+  };
+
+  Object.keys(bubbleSets).forEach(function (selector) {
+    var section = document.querySelector(selector);
+    if (!section) return;
+
+    var layer = document.createElement('div');
+    layer.className = 'bubbles';
+    layer.setAttribute('aria-hidden', 'true');
+
+    bubbleSets[selector].forEach(function (b, index) {
+      var bubble = document.createElement('span');
+      bubble.style.left = b[0] + '%';
+      bubble.style.width = b[1] + 'px';
+      bubble.style.animationDuration = b[2] + 's, ' + (7 + (index % 4) * 2) + 's';
+      bubble.style.animationDelay = b[3] + 's, ' + (-index * 1.3) + 's';
+      layer.appendChild(bubble);
+    });
+
+    section.insertBefore(layer, section.firstChild);
+  });
+
+  /* ---------- 8. Footer year ---------- */
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();
