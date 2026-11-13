@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sean Ashley Reyes — Personal Portfolio</title>
+  <meta name="description" content="Portfolio of Sean Ashley Reyes, a BS Information Technology student at La Consolacion University Philippines who builds mobile apps and web systems and does multimedia work.">
+  <meta name="theme-color" content="#05518E">
+
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER / NAVIGATION ============ -->
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="logo" href="#home" aria-label="Back to top">SR</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="nav-toggle__label">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav__list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ 1. HOME ============ -->
+    <section class="hero" id="home">
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow">Portfolio &middot; 2026</p>
+
+          <h1 class="hero__name display">Sean Ashley<br>Reyes<span class="dot">.</span></h1>
+
+          <p class="hero__tagline">Mobile apps and web systems that work well and feel good to use.</p>
+
+          <p class="hero__intro">
+            I'm a fourth-year BS Information Technology student at La Consolacion University
+            Philippines. I build mobile
+            apps and web systems, and I also do multimedia work, from UI/UX and graphic design to
+            video editing and narration. AI is part of how I work every day, both as a tool in my
+            workflow and as a feature in the apps I build.
+          </p>
+
+          <div class="btn-row">
+            <a class="btn btn--primary" href="#projects">See my work</a>
+            <a class="btn" href="#contact">Contact me</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__frame">
+            <img src="assets/images/profile.jpg" alt="Portrait of Sean Ashley Reyes" width="800" height="1000">
+          </div>
+          <span class="sticker" aria-hidden="true">hello!</span>
+          <p class="hero__tag"><span>Currently</span>4th-year BS Information Technology &middot; CITE, La Consolacion University Philippines</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scrolling strip. Keep both lists identical so the loop is seamless. -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <ul>
+          <li>mobile apps</li><li>web systems</li><li>UI/UX design</li><li>AI-powered workflows</li><li>built for the Philippines</li>
+        </ul>
+        <ul>
+          <li>mobile apps</li><li>web systems</li><li>UI/UX design</li><li>AI-powered workflows</li><li>built for the Philippines</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ============ 2. ABOUT ME ============ -->
+    <section class="section about" id="about">
+      <div class="wrap">
+        <div class="about__top">
+          <div class="reveal">
+            <p class="eyebrow">01 / About me</p>
+            <h2 class="display section-title">About me</h2>
+          </div>
+
+          <p class="about__lead reveal">
+            Hi, I'm Sean Ashley Reyes. My favorite projects are the ones
+            where the system works well and also looks and feels good to use.
+          </p>
+        </div>
+
+        <div class="about__body">
+          <p class="reveal">
+            I'm a fourth-year BS Information Technology student at La Consolacion University
+            Philippines in Malolos, Bulacan. I build mobile apps and web systems, usually taking
+            the UI/UX and frontend side of a project and connecting it to a real backend.
+          </p>
+          <p class="reveal">
+            Alongside development I do multimedia work: video editing, narration, graphic design
+            and photo editing. I lean heavily on AI throughout: for prototyping, coding, research and
+            documentation, and inside the products themselves. Most of what I build is aimed at
+            real problems in the Philippines.
+          </p>
+          <ul class="about__facts reveal">
+            <li><span>Based in</span>Malolos, Bulacan, Philippines</li>
+            <li><span>Studying</span>BS Information Technology, 4th year &middot; graduating 2027</li>
+            <li><span>Focus</span>Mobile &amp; web development, UI/UX, applied AI</li>
+          </ul>
+        </div>
+
+        <!-- Educational background -->
+        <h3 class="display sub-title reveal">Education</h3>
+        <ol class="edu">
+          <li class="edu__item reveal">
+            <p class="edu__years">2023 &ndash; Present</p>
+            <h4>BS Information Technology</h4>
+            <p class="edu__school">La Consolacion University Philippines</p>
+            <p class="edu__note"><a href="https://lcup.edu.ph/cite.php" target="_blank" rel="noopener">College of Information Technology and Engineering (CITE)</a> &middot; Graduating 2027</p>
+          </li>
+          <li class="edu__item reveal">
+            <!-- EDIT: confirm these years -->
+            <p class="edu__years">2021 &ndash; 2023</p>
+            <h4>Senior High School &mdash; STEM</h4>
+            <p class="edu__school">STI College Malolos</p>
+            <p class="edu__note">Grade 12 at STI College Malolos, Grade 11 at St. Martin de Porres Catholic School. Graduation award for research.</p>
+          </li>
+          <li class="edu__item reveal">
+            <p class="edu__years">2017 &ndash; 2021</p>
+            <h4>Junior High School</h4>
+            <p class="edu__school">St. Martin de Porres Catholic School</p>
+            <p class="edu__note">Guiguinto, Bulacan</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 3. SKILLS ============ -->
+    <section class="section skills" id="skills">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">02 / Skills</p>
+          <h2 class="display section-title section-title--extrude">Skills</h2>
+          <p class="section-sub">The technical and programming skills I use to bring ideas to life.</p>
+        </div>
+
+        <div class="skills__cards">
+          <article class="card reveal">
+            <h3>Mobile</h3>
+            <ul class="chips">
+              <li>Flutter (Dart)</li><li>Android (Kotlin)</li><li>Android (Java)</li><li>Android Studio</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Backend &amp; data</h3>
+            <ul class="chips">
+              <li>C#</li><li>Python FastAPI</li><li>Node.js / Express</li><li>Socket.io</li><li>PHP</li><li>MySQL</li><li>PostgreSQL / Supabase</li><li>REST APIs</li><li>JWT auth</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>AI &amp; integrations</h3>
+            <ul class="chips">
+              <li>AI-assisted development</li><li>Generative AI features</li><li>Prompt design</li><li>Gemini API</li><li>ML Kit</li><li>CameraX</li><li>Open Food Facts API</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Tools</h3>
+            <ul class="chips">
+              <li>Git</li><li>GitHub (branches, PRs)</li><li>VS Code</li><li>Cisco Packet Tracer</li><li>Microsoft Excel</li><li>Microsoft Access</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Networking</h3>
+            <ul class="chips">
+              <li>VLANs</li><li>Inter-VLAN routing</li><li>Static &amp; floating static routes</li><li>IPv4 / IPv6</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Design &amp; multimedia</h3>
+            <ul class="chips">
+              <li>Sketch (web design)</li><li>Figma</li><li>UI/UX design</li><li>Visual design</li><li>Pixelmator Pro</li><li>Photomator</li><li>Lightroom</li><li>Premiere Pro</li><li>CapCut</li><li>Blender</li><li>Logic Pro</li><li>Ableton Live</li><li>Music production</li><li>Scriptwriting &amp; storyboarding</li><li>Narration</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Other strengths</h3>
+            <ul class="chips">
+              <li>Computer hardware</li><li>Mobile device repair</li><li>Technical documentation</li><li>Research writing (APA 7th)</li><li>Data privacy compliance (RA 10173)</li><li>Social media management</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. PROJECTS ============ -->
+    <section class="section projects" id="projects">
+      <div class="wrap">
+        <div class="section-head section-head--split reveal">
+          <div>
+            <p class="eyebrow">03 / Projects</p>
+            <h2 class="display section-title">Projects</h2>
+          </div>
+
+        </div>
+
+        <div class="projects__grid">
+          <article class="project reveal" data-category="mobile">
+            <div class="project__media project__media--phones">
+              <img src="assets/images/smartevent-events.jpg" alt="SmartEvent events list with approval status labels" width="540" height="1155" loading="lazy">
+              <img src="assets/images/smartevent-menu.jpg" alt="SmartEvent main menu with Money, Inventory, Reports, Flagged and Administration" width="540" height="1155" loading="lazy">
+              <span class="project__badge">Mobile</span>
+            </div>
+            <div class="project__body">
+              <h3>SmartEvent</h3>
+              <p class="project__meta">Capstone project &middot; UI/UX lead and frontend developer</p>
+              <p>A mobile app that student organizations under LCUP CITE use for events, inventory, budgets and reports, with Officer, Faculty Adviser and Admin roles.</p>
+              <ul class="project__points">
+                <li>Designed the visual system, a &ldquo;docket stub&rdquo; look inspired by receipts and tickets</li>
+                <li>Built role-based dashboards, live budget charts and a two-stage event approval flow</li>
+                <li>Connected the app to a FastAPI + Supabase backend and got a backend fix merged through a pull request</li>
+              </ul>
+              <ul class="chips chips--small">
+                <li>Flutter</li><li>FastAPI</li><li>Supabase</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="mobile">
+            <div class="project__media project__media--shot">
+              <img src="assets/images/saritrack-dashboard.jpg" alt="SariTrack overview dashboard with pantry items, expiry alerts, budget and suggested recipes" width="1600" height="917" loading="lazy">
+              <span class="project__badge">Mobile</span>
+            </div>
+            <div class="project__body">
+              <h3>SariTrack</h3>
+              <p class="project__meta">Capstone project &middot; Defended May 2026</p>
+              <p>A pantry and household budget app for Filipino families.</p>
+              <ul class="project__points">
+                <li>AI recipe suggestions from what's already in the pantry, using the Gemini API</li>
+                <li>Camera barcode scanner built with ML Kit, CameraX and the Open Food Facts API</li>
+                <li>Smart shopping suggestions and spending tracking</li>
+              </ul>
+              <ul class="chips chips--small">
+                <li>Android (Java)</li><li>PHP</li><li>MySQL</li><li>Gemini API</li><li>Sketch</li>
+              </ul>
+            </div>
+            <div class="project__actions">
+              <a href="assets/images/saritrack-dashboard.jpg" target="_blank" rel="noopener">Dashboard</a>
+              <a class="is-primary" href="assets/images/saritrack-recipes.jpg" target="_blank" rel="noopener">Recipes</a>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="design">
+            <div class="project__media">
+              <img src="assets/images/cafe-rencontre-1.jpg" alt="Cafe Rencontre home screen with the cafe logo, tagline and an iced coffee" width="1600" height="1144" loading="lazy">
+              <span class="project__badge">Design</span>
+            </div>
+            <div class="project__body">
+              <h3>Cafe Rencontre</h3>
+              <!-- EDIT: confirm the course and your role for this project -->
+              <p class="project__meta">UI/UX design &middot; Interactive prototype</p>
+              <p>An ordering and point-of-sale interface concept for Cafe Rencontre, the LCUP-CITHM cafe.</p>
+              <ul class="project__points">
+                <li>Menu browsing by category, with hot and iced drinks and two cup sizes</li>
+                <li>Order summary with tax, discount, change and multiple payment methods</li>
+                <li>Guest, login and register flows in a warm coffee-toned visual style</li>
+              </ul>
+              <ul class="chips chips--small">
+                <li>Figma</li><li>UI/UX</li><li>Prototyping</li>
+              </ul>
+            </div>
+            <div class="project__actions">
+              <a href="assets/images/cafe-rencontre-1.jpg" target="_blank" rel="noopener">Home screen</a>
+              <a class="is-primary" href="assets/images/cafe-rencontre-2.jpg" target="_blank" rel="noopener">Order screen</a>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="mobile">
+            <div class="project__media project__media--phones">
+              <img src="assets/images/brewffe-login.jpg" alt="Brewffe login screen" width="540" height="1154" loading="lazy">
+              <img src="assets/images/brewffe-order.jpg" alt="Brewffe order screen with sizes and add-ons" width="540" height="1155" loading="lazy">
+              <img src="assets/images/brewffe-history.jpg" alt="Brewffe order history screen" width="540" height="1157" loading="lazy">
+              <span class="project__badge">Mobile</span>
+            </div>
+            <div class="project__body">
+              <h3>Brewffe</h3>
+              <!-- EDIT: confirm the course and the tech used -->
+              <p class="project__meta">Android app &middot; Coffee ordering</p>
+              <p>A coffee ordering app: &ldquo;your daily cup, one tap away.&rdquo;</p>
+              <ul class="project__points">
+                <li>Account registration and login with validation and clear success and error messages</li>
+                <li>Order builder with drink, size and add-on choices and a live running total</li>
+                <li>Order history with order count, total spent and per-order removal</li>
+              </ul>
+              <ul class="chips chips--small">
+                <li>Android</li><li>Mobile UI</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <p class="projects__empty" hidden>No projects in this category yet.</p>
+
+        <!-- Other work -->
+        <h3 class="display sub-title reveal">Other work</h3>
+        <ul class="other">
+          <li class="reveal">
+            <h4>IT Marketing Campaign Video</h4>
+            <p>A short film promoting the IT program at LCUP CITE, made for Multimedia Systems.</p>
+          </li>
+          <li class="reveal">
+            <h4>WebForge AI</h4>
+            <p>A startup concept for an AI website builder for Philippine small businesses, aligned with SDG 9.</p>
+          </li>
+          <li class="reveal">
+            <h4>Networking labs</h4>
+            <p>Multi-router VLAN topologies and static and floating static routing in Cisco Packet Tracer.</p>
+          </li>
+          <li class="reveal">
+            <h4>Information Security</h4>
+            <p>A data sharing agreement case analysis and a password-leak incident presentation under the Data Privacy Act (RA 10173).</p>
+          </li>
+          <li class="reveal">
+            <h4>System Architecture</h4>
+            <p>A performance engineering case study of the PhilHealth portal, covering throughput calculations and architectural patterns.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 5. ACHIEVEMENTS ============ -->
+    <section class="section achievements" id="achievements">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">04 / Achievements</p>
+          <h2 class="display section-title">Achievements</h2>
+          <p class="section-sub">Certifications, seminars, competitions and awards along the way.</p>
+        </div>
+
+        <ol class="awards">
+          <!-- One <li> per achievement, newest first -->
+          <li class="award reveal">
+            <span class="award__year">2026</span>
+            <div class="award__body">
+              <h3>RAITE 2026 Hackathon Challenge</h3>
+              <p>Competitor &middot; PSITE Central Luzon &middot; Pampanga State University &middot; October 2, 2026</p>
+            </div>
+            <span class="award__type">Hackathon</span>
+            <a class="award__link" href="assets/certificates/raite-2026-hackathon.jpg" target="_blank" rel="noopener">View &nearr;</a>
+          </li>
+          <li class="award reveal">
+            <span class="award__year">2026</span>
+            <div class="award__body">
+              <h3>Pace Level Up V.7.1</h3>
+              <p>Certificate of participation &middot; KadaKareer and JPSSITE-LCUP &middot; September 16, 2026</p>
+            </div>
+            <span class="award__type">Seminar</span>
+            <a class="award__link" href="assets/certificates/kadakareer-pace-level-up-2026.jpg" target="_blank" rel="noopener">View &nearr;</a>
+          </li>
+          <li class="award reveal">
+            <span class="award__year">2026</span>
+            <div class="award__body">
+              <h3>SariTrack capstone defended</h3>
+              <p>La Consolacion University Philippines &middot; May 2026</p>
+            </div>
+            <span class="award__type">Milestone</span>
+          </li>
+          <li class="award reveal">
+            <span class="award__year">2025</span>
+            <div class="award__body">
+              <h3>Microsoft Office Specialist: Access 2019 Expert</h3>
+              <p>Microsoft &middot; December 16, 2025</p>
+            </div>
+            <span class="award__type">Certification</span>
+            <a class="award__link" href="assets/certificates/mos-access-2019-expert.jpg" target="_blank" rel="noopener">View &nearr;</a>
+          </li>
+          <li class="award reveal">
+            <span class="award__year">2025</span>
+            <div class="award__body">
+              <h3>Foundational C# with Microsoft</h3>
+              <p>Developer certification &middot; freeCodeCamp and Microsoft &middot; October 10, 2025</p>
+            </div>
+            <span class="award__type">Certification</span>
+            <a class="award__link" href="https://freecodecamp.org/certification/seanashleypreyes/foundational-c-sharp-with-microsoft" target="_blank" rel="noopener">Verify &nearr;</a>
+          </li>
+          <li class="award reveal">
+            <span class="award__year">2024</span>
+            <div class="award__body">
+              <h3>Microsoft Office Specialist: Excel 2019 Associate</h3>
+              <p>Microsoft &middot; May 21, 2024</p>
+            </div>
+            <span class="award__type">Certification</span>
+            <a class="award__link" href="assets/certificates/mos-excel-2019-associate.jpg" target="_blank" rel="noopener">View &nearr;</a>
+          </li>
+          <li class="award reveal">
+            <span class="award__year">2023</span>
+            <div class="award__body">
+              <h3>IT Trends: Navigating the Ever-Changing Digital Landscape</h3>
+              <p>JPSSITE Pace Level Up v. 4.0 seminar &middot; La Consolacion University Philippines &middot; October 12, 2023</p>
+            </div>
+            <span class="award__type">Seminar</span>
+            <a class="award__link" href="assets/certificates/jpssite-it-trends-2023.jpg" target="_blank" rel="noopener">View &nearr;</a>
+          </li>
+          <li class="award reveal">
+            <!-- EDIT: confirm the year -->
+            <span class="award__year">2023</span>
+            <div class="award__body">
+              <h3>Graduation award for research</h3>
+              <p>STI College Malolos &middot; Senior High School</p>
+            </div>
+            <span class="award__type">Award</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 6. CONTACT ME ============ -->
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">05 / Contact me</p>
+          <h2 class="display section-title section-title--huge">Let's talk<span class="dot">.</span></h2>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__info reveal">
+            <p class="contact__lead">
+              Have a project, an internship opening, or just want to say hi? My inbox is always open.
+            </p>
+
+            <dl class="contact__list">
+              <div>
+                <dt>Email</dt>
+                <!-- The form below sends to this address; keep the href and the text the same. -->
+                <dd><a id="email-link" href="mailto:seanreyes1122@gmail.com">seanreyes1122@gmail.com</a></dd>
+              </div>
+              <div>
+                <dt>Location</dt>
+                <dd>Malolos, Bulacan, Philippines</dd>
+              </div>
+            </dl>
+
+            <!-- Add LinkedIn / Facebook the same way -->
+            <ul class="socials">
+              <li><a href="https://github.com/sionelcaramel" target="_blank" rel="noopener">GitHub &nearr;</a></li>
+            </ul>
+          </div>
+
+          <form class="contact__form reveal" id="contact-form">
+            <div class="field">
+              <label for="cf-name">Your name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="cf-email">Your email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" required></textarea>
+            </div>
+            <button class="btn btn--primary btn--on-dark" type="submit">Send message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <p>&copy; <span id="year">2026</span> Sean Ashley Reyes. Designed &amp; built by me.</p>
+      <a class="to-top" href="#home">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
