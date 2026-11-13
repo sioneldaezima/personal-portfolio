@@ -1362,6 +1362,21 @@ a {
   padding-block: 1.5rem;
 }
 
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+}
+
+.stack__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green-deep);
+}
+
 .to-top {
   font-weight: 600;
   color: var(--ocean);
