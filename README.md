@@ -1,10 +1,10 @@
 # Personal Portfolio
 
-My personal portfolio website, styled as a modern take on Frutiger Aero — final project for **IT ELEC 4: Web Systems and Technologies 2**
+My personal portfolio website, styled as a modern take on Frutiger Aero  final project for **IT ELEC 4: Web Systems and Technologies 2**
 (La Consolacion University Philippines, 1st Semester, S.Y. 2026–2027).
 
-<!-- EDIT: replace with your real links after deploying -->
-- **Live site:** https://your-portfolio.vercel.app
+
+- **Live site:** [my portfolio](https://seanreyes-portfolio.vercel.app/)
 - **Repository:** https://github.com/sioneldaezima/personal-portfolio
 
 ## Sections
