@@ -35,8 +35,8 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
           <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -47,37 +47,42 @@
 
     <!-- ============ 1. HOME ============ -->
     <section class="hero" id="home">
-      <div class="wrap hero__grid">
-        <div class="hero__text">
-          <p class="eyebrow">Portfolio &middot; 2026</p>
+      <div class="wrap hero2">
+        <p class="hero2__word display" aria-hidden="true">Portfolio</p>
 
-          <h1 class="hero__name display">Sean Ashley<br>Reyes<span class="dot">.</span></h1>
-
-          <p class="hero__tagline">Mobile apps and web systems that work well and feel good to use.</p>
-
-          <p class="hero__intro">
-            I'm a fourth-year BS Information Technology student at La Consolacion University
-            Philippines. I build mobile
-            apps and web systems, and I also do multimedia work, from UI/UX and graphic design to
-            video editing and narration. AI is part of how I work every day, both as a tool in my
-            workflow and as a feature in the apps I build.
-          </p>
-
-          <div class="btn-row">
-            <a class="btn btn--primary" href="#projects">See my work</a>
-            <a class="btn" href="#contact">Contact me</a>
-          </div>
+        <div class="hero2__photo">
+          <img src="assets/images/profile.jpg" alt="Portrait of Sean Ashley Reyes" width="1000" height="1250">
         </div>
 
-        <div class="hero__visual">
-          <div class="hero__frame">
-            <img src="assets/images/profile.jpg" alt="Portrait of Sean Ashley Reyes" width="800" height="1000">
+        <div class="hero2__side">
+          <div class="hero2__echo" aria-hidden="true">
+            <span>Portfolio</span><span>Portfolio</span><span>Portfolio</span>
           </div>
-          <span class="sticker" aria-hidden="true">hello!</span>
-          <p class="hero__tag"><span>Currently</span>4th-year BS Information Technology &middot; CITE, La Consolacion University Philippines</p>
+
+          <div class="hero2__text">
+            <p class="eyebrow">Portfolio &middot; 2026</p>
+            <h1 class="hero2__name display">Sean Ashley Reyes<span class="dot">.</span></h1>
+            <p class="hero__tagline">Mobile apps and web systems that work well and feel good to use.</p>
+            <p class="hero2__intro">
+              Fourth-year BS Information Technology student at La Consolacion University
+              Philippines. I build mobile and web systems, design their interfaces, and use AI
+              throughout my workflow.
+            </p>
+            <ul class="hero2__links">
+              <li><span>GH</span><a href="https://github.com/sioneldaezima" target="_blank" rel="noopener">/sioneldaezima</a></li>
+              <li><span>LI</span><a href="https://www.linkedin.com/in/sean-ashley-reyes-12037044b/" target="_blank" rel="noopener">/sean-ashley-reyes</a></li>
+              <li><span>IG</span><a href="https://www.instagram.com/sionel.ishere" target="_blank" rel="noopener">@sionel.ishere</a></li>
+            </ul>
+            <div class="btn-row">
+              <a class="btn btn--primary" href="#projects">See my work</a>
+              <a class="btn" href="#contact">Contact me</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <div class="scroll-cue"><a href="#about">Scroll<br>down</a></div>
 
     <!-- Scrolling strip. Keep both lists identical so the loop is seamless. -->
     <div class="marquee" aria-hidden="true">
@@ -92,21 +97,11 @@
     </div>
 
     <!-- ============ 2. ABOUT ME ============ -->
-    <section class="section about" id="about">
-      <div class="wrap">
-        <div class="about__top">
-          <div class="reveal">
-            <p class="eyebrow">01 / About me</p>
-            <h2 class="display section-title">About me</h2>
-          </div>
-
-          <p class="about__lead reveal">
-            Hi, I'm Sean Ashley Reyes. My favorite projects are the ones
-            where the system works well and also looks and feels good to use.
-          </p>
-        </div>
-
-        <div class="about__body">
+    <section class="section hello" id="about">
+      <div class="wrap hello__grid">
+        <div class="hello__text">
+          <p class="eyebrow reveal">01 / About me</p>
+          <h2 class="display hello__title reveal">Hello,<br>I'm Sean<span class="dot">!</span></h2>
           <p class="reveal">
             I'm a fourth-year BS Information Technology student at La Consolacion University
             Philippines in Malolos, Bulacan. I build mobile apps and web systems, usually taking
@@ -115,50 +110,137 @@
           <p class="reveal">
             Alongside development I do multimedia work: video editing, narration, graphic design
             and photo editing. I lean heavily on AI throughout: for prototyping, coding, research and
-            documentation, and inside the products themselves. Most of what I build is aimed at
-            real problems in the Philippines.
+            documentation, and inside the products themselves. My favorite projects are the ones
+            where the system works well and also looks and feels good to use.
           </p>
-          <ul class="about__facts reveal">
-            <li><span>Based in</span>Malolos, Bulacan, Philippines</li>
-            <li><span>Studying</span>BS Information Technology, 4th year &middot; graduating 2027</li>
-            <li><span>Focus</span>Mobile &amp; web development, UI/UX, applied AI</li>
-          </ul>
+          <a class="hello__link reveal" href="https://www.linkedin.com/in/sean-ashley-reyes-12037044b/" target="_blank" rel="noopener">linkedin.com/in/sean-ashley-reyes &nearr;</a>
         </div>
 
-        <!-- Educational background -->
-        <h3 class="display sub-title reveal">Education</h3>
-        <ol class="edu">
-          <li class="edu__item reveal">
-            <p class="edu__years">2023 &ndash; Present</p>
-            <h4>BS Information Technology</h4>
-            <p class="edu__school">La Consolacion University Philippines</p>
-            <p class="edu__note"><a href="https://lcup.edu.ph/cite.php" target="_blank" rel="noopener">College of Information Technology and Engineering (CITE)</a> &middot; Graduating 2027</p>
-          </li>
-          <li class="edu__item reveal">
-            <!-- EDIT: confirm these years -->
-            <p class="edu__years">2021 &ndash; 2023</p>
-            <h4>Senior High School &mdash; STEM</h4>
-            <p class="edu__school">STI College Malolos</p>
-            <p class="edu__note">Grade 12 at STI College Malolos, Grade 11 at St. Martin de Porres Catholic School. Graduation award for research.</p>
-          </li>
-          <li class="edu__item reveal">
-            <p class="edu__years">2017 &ndash; 2021</p>
-            <h4>Junior High School</h4>
-            <p class="edu__school">St. Martin de Porres Catholic School</p>
-            <p class="edu__note">Guiguinto, Bulacan</p>
-          </li>
-        </ol>
+        <div class="hello__visual reveal">
+          <div class="hello__panel">
+            <img src="assets/images/profile.jpg" alt="" width="1000" height="1250" loading="lazy">
+          </div>
+          <p class="hello__pill hello__pill--a">4th year &middot; graduating 2027</p>
+          <p class="hello__pill hello__pill--b">UI/UX &middot; applied AI</p>
+          <div class="hello__card">
+            <h3>Quick contact</h3>
+            <ul>
+              <li><span>Based in</span>Malolos, Bulacan, Philippines</li>
+              <li><span>Email</span><a href="mailto:seanreyes1122@gmail.com">seanreyes1122@gmail.com</a></li>
+              <li><span>GitHub</span><a href="https://github.com/sioneldaezima" target="_blank" rel="noopener">github.com/sioneldaezima</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ============ 3. SKILLS ============ -->
-    <section class="section skills" id="skills">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="eyebrow">02 / Skills</p>
-          <h2 class="display section-title section-title--extrude">Skills</h2>
-          <p class="section-sub">The technical and programming skills I use to bring ideas to life.</p>
+    <!-- ============ 3. EDUCATION, ACHIEVEMENTS, SKILLS ============ -->
+    <section class="section resume">
+      <div class="wrap resume__grid">
+        <div class="resume__left">
+          <h2 class="display resume__title reveal">Education</h2>
+          <ol class="tl">
+            <li class="reveal">
+              <p class="tl__when">2023 &ndash; now</p>
+              <div class="tl__what">
+                <h4>BS Information Technology</h4>
+                <p>La Consolacion University Philippines</p>
+                <p><a href="https://lcup.edu.ph/cite.php" target="_blank" rel="noopener">College of Information Technology and Engineering (CITE)</a> &middot; Graduating 2027</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <!-- EDIT: confirm these years -->
+              <p class="tl__when">2021 &ndash; 2023</p>
+              <div class="tl__what">
+                <h4>Senior High School &mdash; STEM</h4>
+                <p>STI College Malolos (Grade 12) &middot; St. Martin de Porres Catholic School (Grade 11)</p>
+                <p>Graduation award for research</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <p class="tl__when">2017 &ndash; 2021</p>
+              <div class="tl__what">
+                <h4>Junior High School</h4>
+                <p>St. Martin de Porres Catholic School, Guiguinto, Bulacan</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="resume__box" id="achievements">
+            <p class="eyebrow reveal">03 / Achievements</p>
+            <h2 class="display resume__title reveal">Achievements</h2>
+            <!-- One <li> per achievement, newest first -->
+            <ol class="tl tl--light">
+              <li class="reveal">
+                <p class="tl__when">2026</p>
+                <div class="tl__what">
+                  <h4>RAITE 2026 Hackathon Challenge</h4>
+                  <p>Competitor &middot; PSITE Central Luzon &middot; Pampanga State University &middot; October 2, 2026</p>
+                  <a class="tl__link" href="assets/certificates/raite-2026-hackathon.jpg" target="_blank" rel="noopener">View &nearr;</a>
+                </div>
+              </li>
+              <li class="reveal">
+                <p class="tl__when">2026</p>
+                <div class="tl__what">
+                  <h4>Pace Level Up V.7.1</h4>
+                  <p>Certificate of participation &middot; KadaKareer and JPSSITE-LCUP &middot; September 16, 2026</p>
+                  <a class="tl__link" href="assets/certificates/kadakareer-pace-level-up-2026.jpg" target="_blank" rel="noopener">View &nearr;</a>
+                </div>
+              </li>
+              <li class="reveal">
+                <p class="tl__when">2026</p>
+                <div class="tl__what">
+                  <h4>SariTrack capstone defended</h4>
+                  <p>La Consolacion University Philippines &middot; May 2026</p>
+                </div>
+              </li>
+              <li class="reveal">
+                <p class="tl__when">2025</p>
+                <div class="tl__what">
+                  <h4>Microsoft Office Specialist: Access 2019 Expert</h4>
+                  <p>Microsoft &middot; December 16, 2025</p>
+                  <a class="tl__link" href="assets/certificates/mos-access-2019-expert.jpg" target="_blank" rel="noopener">View &nearr;</a>
+                </div>
+              </li>
+              <li class="reveal">
+                <p class="tl__when">2025</p>
+                <div class="tl__what">
+                  <h4>Foundational C# with Microsoft</h4>
+                  <p>Developer certification &middot; freeCodeCamp and Microsoft &middot; October 10, 2025</p>
+                  <a class="tl__link" href="https://freecodecamp.org/certification/seanashleypreyes/foundational-c-sharp-with-microsoft" target="_blank" rel="noopener">Verify &nearr;</a>
+                </div>
+              </li>
+              <li class="reveal">
+                <p class="tl__when">2024</p>
+                <div class="tl__what">
+                  <h4>Microsoft Office Specialist: Excel 2019 Associate</h4>
+                  <p>Microsoft &middot; May 21, 2024</p>
+                  <a class="tl__link" href="assets/certificates/mos-excel-2019-associate.jpg" target="_blank" rel="noopener">View &nearr;</a>
+                </div>
+              </li>
+              <li class="reveal">
+                <p class="tl__when">2023</p>
+                <div class="tl__what">
+                  <h4>IT Trends: Navigating the Ever-Changing Digital Landscape</h4>
+                  <p>JPSSITE Pace Level Up v. 4.0 seminar &middot; La Consolacion University Philippines &middot; October 12, 2023</p>
+                  <a class="tl__link" href="assets/certificates/jpssite-it-trends-2023.jpg" target="_blank" rel="noopener">View &nearr;</a>
+                </div>
+              </li>
+              <li class="reveal">
+                <p class="tl__when">2023</p>
+                <div class="tl__what">
+                  <h4>Graduation award for research</h4>
+                  <p>STI College Malolos &middot; Senior High School</p>
+                </div>
+              </li>
+            </ol>
+          </div>
         </div>
+
+        <div class="resume__right" id="skills">
+          <p class="eyebrow reveal">02 / Skills</p>
+          <h2 class="display resume__title reveal">Technical skills</h2>
+          <p class="section-sub reveal">The technical and programming skills I use to bring ideas to life.</p>
 
         <div class="skills__cards">
           <article class="card reveal">
@@ -204,6 +286,8 @@
             </ul>
           </article>
         </div>
+
+        </div>
       </div>
     </section>
 
@@ -212,7 +296,7 @@
       <div class="wrap">
         <div class="section-head section-head--split reveal">
           <div>
-            <p class="eyebrow">03 / Projects</p>
+            <p class="eyebrow">04 / Projects</p>
             <h2 class="display section-title">Projects</h2>
           </div>
 
@@ -339,92 +423,6 @@
             <p>A performance engineering case study of the PhilHealth portal, covering throughput calculations and architectural patterns.</p>
           </li>
         </ul>
-      </div>
-    </section>
-
-    <!-- ============ 5. ACHIEVEMENTS ============ -->
-    <section class="section achievements" id="achievements">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="eyebrow">04 / Achievements</p>
-          <h2 class="display section-title">Achievements</h2>
-          <p class="section-sub">Certifications, seminars, competitions and awards along the way.</p>
-        </div>
-
-        <ol class="awards">
-          <!-- One <li> per achievement, newest first -->
-          <li class="award reveal">
-            <span class="award__year">2026</span>
-            <div class="award__body">
-              <h3>RAITE 2026 Hackathon Challenge</h3>
-              <p>Competitor &middot; PSITE Central Luzon &middot; Pampanga State University &middot; October 2, 2026</p>
-            </div>
-            <span class="award__type">Hackathon</span>
-            <a class="award__link" href="assets/certificates/raite-2026-hackathon.jpg" target="_blank" rel="noopener">View &nearr;</a>
-          </li>
-          <li class="award reveal">
-            <span class="award__year">2026</span>
-            <div class="award__body">
-              <h3>Pace Level Up V.7.1</h3>
-              <p>Certificate of participation &middot; KadaKareer and JPSSITE-LCUP &middot; September 16, 2026</p>
-            </div>
-            <span class="award__type">Seminar</span>
-            <a class="award__link" href="assets/certificates/kadakareer-pace-level-up-2026.jpg" target="_blank" rel="noopener">View &nearr;</a>
-          </li>
-          <li class="award reveal">
-            <span class="award__year">2026</span>
-            <div class="award__body">
-              <h3>SariTrack capstone defended</h3>
-              <p>La Consolacion University Philippines &middot; May 2026</p>
-            </div>
-            <span class="award__type">Milestone</span>
-          </li>
-          <li class="award reveal">
-            <span class="award__year">2025</span>
-            <div class="award__body">
-              <h3>Microsoft Office Specialist: Access 2019 Expert</h3>
-              <p>Microsoft &middot; December 16, 2025</p>
-            </div>
-            <span class="award__type">Certification</span>
-            <a class="award__link" href="assets/certificates/mos-access-2019-expert.jpg" target="_blank" rel="noopener">View &nearr;</a>
-          </li>
-          <li class="award reveal">
-            <span class="award__year">2025</span>
-            <div class="award__body">
-              <h3>Foundational C# with Microsoft</h3>
-              <p>Developer certification &middot; freeCodeCamp and Microsoft &middot; October 10, 2025</p>
-            </div>
-            <span class="award__type">Certification</span>
-            <a class="award__link" href="https://freecodecamp.org/certification/seanashleypreyes/foundational-c-sharp-with-microsoft" target="_blank" rel="noopener">Verify &nearr;</a>
-          </li>
-          <li class="award reveal">
-            <span class="award__year">2024</span>
-            <div class="award__body">
-              <h3>Microsoft Office Specialist: Excel 2019 Associate</h3>
-              <p>Microsoft &middot; May 21, 2024</p>
-            </div>
-            <span class="award__type">Certification</span>
-            <a class="award__link" href="assets/certificates/mos-excel-2019-associate.jpg" target="_blank" rel="noopener">View &nearr;</a>
-          </li>
-          <li class="award reveal">
-            <span class="award__year">2023</span>
-            <div class="award__body">
-              <h3>IT Trends: Navigating the Ever-Changing Digital Landscape</h3>
-              <p>JPSSITE Pace Level Up v. 4.0 seminar &middot; La Consolacion University Philippines &middot; October 12, 2023</p>
-            </div>
-            <span class="award__type">Seminar</span>
-            <a class="award__link" href="assets/certificates/jpssite-it-trends-2023.jpg" target="_blank" rel="noopener">View &nearr;</a>
-          </li>
-          <li class="award reveal">
-            <!-- EDIT: confirm the year -->
-            <span class="award__year">2023</span>
-            <div class="award__body">
-              <h3>Graduation award for research</h3>
-              <p>STI College Malolos &middot; Senior High School</p>
-            </div>
-            <span class="award__type">Award</span>
-          </li>
-        </ol>
       </div>
     </section>
 
