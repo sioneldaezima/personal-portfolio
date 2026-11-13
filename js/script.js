@@ -1,6 +1,6 @@
 /* Personal Portfolio — interactions
    1. Mobile menu   2. Active nav link   3. Reveal on scroll
-   4. Project filter   5. Contact form   6. Footer year */
+   4. Project filter   5. Contact form   6. Liquid-glass hover   7. Footer year */
 
 (function () {
   'use strict';
@@ -135,7 +135,23 @@
     });
   }
 
-  /* ---------- 6. Footer year ---------- */
+  /* ---------- 6. Liquid-glass hover ----------
+     Marks the glass surfaces and feeds the pointer position to CSS,
+     so the highlight in style.css follows the cursor. */
+  var glassTargets = document.querySelectorAll(
+    '.card, .project, .other li, .hello__card, .hello__link, .resume__box, .contact__form, .btn, .nav__list a, .socials a'
+  );
+
+  Array.prototype.forEach.call(glassTargets, function (el) {
+    el.classList.add('glass-hover');
+    el.addEventListener('pointermove', function (event) {
+      var box = el.getBoundingClientRect();
+      el.style.setProperty('--mx', (event.clientX - box.left) + 'px');
+      el.style.setProperty('--my', (event.clientY - box.top) + 'px');
+    });
+  });
+
+  /* ---------- 7. Footer year ---------- */
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();
