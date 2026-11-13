@@ -1,9 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <radialGradient id="g" cx="50%" cy="60%" r="60%"><stop offset="0" stop-color="#8fbe6e"/><stop offset="1" stop-color="#4f8a30"/></radialGradient>
-    <linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f8fd0"/><stop offset="1" stop-color="#05518e"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a9ad8"/>
+      <stop offset=".5" stop-color="#1a6cb0"/>
+      <stop offset=".5" stop-color="#05518e"/>
+      <stop offset="1" stop-color="#0f62a5"/>
+    </linearGradient>
+    <linearGradient id="s" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".05"/>
+    </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="16" fill="url(#b)"/>
-  <circle cx="32" cy="34" r="19" fill="url(#g)"/>
-  <ellipse cx="27" cy="25" rx="10" ry="6" fill="#fff" opacity=".7"/>
+  <circle cx="32" cy="32" r="30" fill="url(#b)" stroke="#033a68" stroke-width="2"/>
+  <ellipse cx="32" cy="18" rx="21" ry="12" fill="url(#s)"/>
+  <text x="32" y="42" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="-1" fill="#fff">SR</text>
 </svg>
