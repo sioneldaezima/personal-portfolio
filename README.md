@@ -5,7 +5,7 @@ My personal portfolio website, styled as a modern take on Frutiger Aero — fina
 
 <!-- EDIT: replace with your real links after deploying -->
 - **Live site:** https://your-portfolio.vercel.app
-- **Repository:** https://github.com/sionelcaramel/personal-portfolio
+- **Repository:** https://github.com/sioneldaezima/personal-portfolio
 
 ## Sections
 
