@@ -181,6 +181,55 @@
     });
 
     section.insertBefore(layer, section.firstChild);
+
+    // Bubbles sit behind the content, so clicks are caught on the section
+    // and matched against each bubble's position.
+    function bubbleAt(event) {
+      if (event.target.closest('a, button, input, textarea, label, dialog')) return null;
+      var bubbles = layer.children;
+      for (var i = 0; i < bubbles.length; i += 1) {
+        var bubble = bubbles[i];
+        if (!bubble.classList || bubble.classList.contains('bubble-pop') || bubble.style.visibility === 'hidden') continue;
+        var box = bubble.getBoundingClientRect();
+        var radius = Math.max(box.width / 2, 16); // small bubbles get a fair hit area
+        var dx = event.clientX - (box.left + box.width / 2);
+        var dy = event.clientY - (box.top + box.height / 2);
+        if (dx * dx + dy * dy <= radius * radius) return bubble;
+      }
+      return null;
+    }
+
+    section.addEventListener('pointermove', function (event) {
+      section.style.cursor = bubbleAt(event) ? 'pointer' : '';
+    });
+
+    section.addEventListener('click', function (event) {
+      var bubble = bubbleAt(event);
+      if (!bubble) return;
+
+      var box = bubble.getBoundingClientRect();
+      var layerBox = layer.getBoundingClientRect();
+      var pop = document.createElement('div');
+      pop.className = 'bubble-pop';
+      pop.style.left = (box.left - layerBox.left + box.width / 2) + 'px';
+      pop.style.top = (box.top - layerBox.top + box.height / 2) + 'px';
+      pop.style.setProperty('--size', box.width + 'px');
+      for (var d = 0; d < 8; d += 1) {
+        var drop = document.createElement('i');
+        drop.style.setProperty('--angle', (d * 45 + 12) + 'deg');
+        pop.appendChild(drop);
+      }
+      layer.appendChild(pop);
+      window.setTimeout(function () { pop.remove(); }, 600);
+
+      // Hide the popped bubble until it starts its next trip from the bottom
+      bubble.style.visibility = 'hidden';
+      bubble.addEventListener('animationiteration', function restore(e) {
+        if (e.animationName !== 'bubble-rise') return;
+        bubble.style.visibility = '';
+        bubble.removeEventListener('animationiteration', restore);
+      });
+    });
   });
 
   /* ---------- 8. Dark mode toggle ----------

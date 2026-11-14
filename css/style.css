@@ -2540,3 +2540,53 @@ body {
     animation: none;
   }
 }
+
+
+/* ==========================================================================
+   19. Bubble pop — a quick ring and droplets where a bubble was clicked
+   ========================================================================== */
+.bubble-pop {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.bubble-pop::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--size);
+  height: var(--size);
+  border: 2px solid rgb(255 255 255 / 0.9);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pop-ring 0.45s ease-out forwards;
+}
+
+.bubble-pop i {
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle at 35% 30%, #fff 0%, rgb(181 217 226 / 0.9) 70%);
+  border-radius: 50%;
+  transform: rotate(var(--angle)) translateY(calc(var(--size) * -0.4));
+  animation: pop-drop 0.5s ease-out forwards;
+}
+
+@keyframes pop-ring {
+  to {
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes pop-drop {
+  to {
+    transform: rotate(var(--angle)) translateY(calc(var(--size) * -1.1 - 14px)) scale(0.3);
+    opacity: 0;
+  }
+}
