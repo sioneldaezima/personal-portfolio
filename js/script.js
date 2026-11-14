@@ -1,7 +1,8 @@
 /* Personal Portfolio — interactions
    1. Mobile menu   2. Active nav link   3. Reveal on scroll
    4. Project filter   5. Contact form   6. Liquid-glass hover
-   7. Floating bubbles   8. Dark mode toggle   9. Footer year */
+   7. Floating bubbles   8. Dark mode toggle
+   9. Certificate viewer window   10. Footer year */
 
 (function () {
   'use strict';
@@ -204,7 +205,45 @@
     });
   }
 
-  /* ---------- 9. Footer year ---------- */
+  /* ---------- 9. Certificate viewer window ----------
+     "View" links that point at an image open it in a glass window on the
+     page. Without JavaScript they still open the image in a new tab. */
+  var viewer = document.getElementById('cert-viewer');
+
+  if (viewer && typeof viewer.showModal === 'function') {
+    var viewerImg = viewer.querySelector('.viewer__img');
+    var viewerTitle = viewer.querySelector('.viewer__title');
+    var viewerMeta = viewer.querySelector('.viewer__meta');
+    var viewerOpen = viewer.querySelector('.viewer__open');
+
+    Array.prototype.forEach.call(document.querySelectorAll('a.tl__link'), function (link) {
+      if (!/\.(jpe?g|png|webp)$/i.test(link.getAttribute('href'))) return;
+
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        var item = link.closest('.tl__what');
+        var title = item.querySelector('h4').textContent;
+
+        viewerTitle.textContent = title;
+        viewerMeta.textContent = item.querySelector('p').textContent;
+        viewerImg.src = link.href;
+        viewerImg.alt = 'Certificate: ' + title;
+        viewerOpen.href = link.href;
+        viewer.showModal();
+      });
+    });
+
+    viewer.querySelector('.viewer__close').addEventListener('click', function () {
+      viewer.close();
+    });
+
+    // Clicking the dimmed area outside the window closes it
+    viewer.addEventListener('click', function (event) {
+      if (event.target === viewer) viewer.close();
+    });
+  }
+
+  /* ---------- 10. Footer year ---------- */
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();
